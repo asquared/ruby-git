@@ -468,6 +468,10 @@ module Git
       self.lib.object_contents(objectish)
     end
 
+    def hash_file(path)
+      self.lib.hash_file(path)
+    end
+
     # returns the name of the branch the working directory is currently on
     def current_branch
       self.lib.branch_current

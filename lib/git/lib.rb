@@ -167,6 +167,10 @@ module Git
       command('cat-file', ['-p', sha], &block)
     end
 
+    def hash_file(path, &block)
+      command('hash-object', ['-w', path], &block)
+    end
+
     def ls_tree(sha)
       data = {'blob' => {}, 'tree' => {}}
       
